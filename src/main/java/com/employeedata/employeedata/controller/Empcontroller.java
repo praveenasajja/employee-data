@@ -33,16 +33,16 @@ public class Empcontroller {
 		return empService.getEmployee(empId);
 
 }
-    @RequestMapping(value = "/employees", //
-            method = RequestMethod.GET, //
+    @RequestMapping(value = "/employees", 
+            method = RequestMethod.GET, 
             produces = "application/json")
     @ResponseBody
     public List<Employee> getEmployees() {
         List<Employee> list = empService.getAllEmployees();
         return list;
     }
-    @RequestMapping(value = "/addEmployee", //
-            method = RequestMethod.POST, //
+    @RequestMapping(value = "/addEmployee", 
+            method = RequestMethod.POST, 
             produces = "application/json")
     @ResponseBody
     public Employee addEmployee(@RequestBody Employee emp) {
@@ -51,8 +51,8 @@ public class Empcontroller {
 
         return empService.addEmployee(emp);
     }
-    @RequestMapping(value = "/getAllRoles", //
-            method = RequestMethod.GET, //
+    @RequestMapping(value = "/getAllRoles", 
+            method = RequestMethod.GET, 
             produces = "application/json")
     @ResponseBody
     public List<Role> getAllRoles() {
@@ -60,8 +60,8 @@ public class Empcontroller {
         return list;
     }
     
-    @RequestMapping(value = "/addRole", //
-            method = RequestMethod.POST, //
+    @RequestMapping(value = "/addRole", 
+            method = RequestMethod.POST, 
             produces = "application/json")
     @ResponseBody
     public Role addRole(@RequestBody Role role) {
@@ -71,8 +71,8 @@ public class Empcontroller {
         return empService.addRole(role);
     }
     
-    @RequestMapping(value = "/addRoleToEmployee", //
-            method = RequestMethod.POST, //
+    @RequestMapping(value = "/addRoleToEmployee",
+            method = RequestMethod.POST, 
             produces = "application/json")
     @ResponseBody
     public Employee addRoleToEmployee(@RequestBody Employee emp) {
