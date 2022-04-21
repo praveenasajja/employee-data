@@ -5,6 +5,7 @@ public class Employee {
 	private String firstName;
 	private String lastName;
 	private String empId;
+	private Role role;
 	public Employee() {
 		
 	}
@@ -14,6 +15,13 @@ public class Employee {
 		this.firstName=firstName;
 		this.lastName=lastname;
 		this.empId=empId;
+	}
+	public Employee(String firstName, String lastname, String empId, Role role) {
+		super();
+		this.firstName=firstName;
+		this.lastName=lastname;
+		this.empId=empId;
+		this.role=role;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -34,6 +42,12 @@ public class Employee {
 		this.empId = empId;
 	}
 	
-	
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
 	
 }
